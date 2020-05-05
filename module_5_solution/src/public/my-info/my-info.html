@@ -1,0 +1,32 @@
+<div class="page--newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div ng-if="myinfoCtrl.showInfo">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>First name</th>
+                            <th>last name</th>
+                            <th>email</th>
+                            <th>Phone number</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{myinfoCtrl.newsletterFormData.user.firstname}}</td>
+                                <td>{{myinfoCtrl.newsletterFormData.user.lastname}}</td>
+                                <td>{{myinfoCtrl.newsletterFormData.user.email}}</td>
+                                <td>{{myinfoCtrl.newsletterFormData.user.phonenumber}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <menu-item menu-item="myinfoCtrl.newsletterFormData.favoriteDish"></menu-item>
+                </div>
+                <p ng-if="!myinfoCtrl.showInfo" class="text-center">Not Signed Up Yet. <a ui-sref="public.newsletter">Sign up Now!</a></p>
+            </div>
+        </div>
+    </div>
+</div>
